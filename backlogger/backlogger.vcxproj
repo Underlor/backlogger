@@ -61,19 +61,20 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
-    <ClCompile Include="ConfigReader.cpp" />
+    <ClCompile Include="config_reader.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ConfigReader.h" />
+    <ClInclude Include="config_reader.h" />
+    <ClInclude Include="KeyChecker.h" />
   </ItemGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>M:\IncludesCpp\lib;M:\IncludesCpp\boost_1_55_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>-lboost_system -lboost_filesystem %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-lboost_system -lboost_filesystem -lboost_date_time %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
-      <AdditionalOptions>-lboost_system -lboost_filesystem %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-lboost_system -lboost_filesystem -lboost_date_time %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
