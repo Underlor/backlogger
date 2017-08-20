@@ -9,7 +9,6 @@ using namespace boost::algorithm;
 
 int main()
 {	
-
 	const std::string path = "/etc/backloger/config.conf";
 	ConfigReader cfg(path);
 	return 0;
